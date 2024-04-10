@@ -13,6 +13,12 @@
             uri: https://github.com/AlexCoilaJrt/DAD-2024-G1.git # ruta del repositorio git
             searchPaths: config-data
             default-label: main
-            #username:
+            #username
+            #password:
+            security:
+              user:
+                name: root
+              password: 123456
+              #username
             #password:
 
