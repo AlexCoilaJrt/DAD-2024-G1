@@ -9,7 +9,7 @@ import com.example.mspedidoservice.service.PedidoService;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/pedido")
 public class PedidoController {
 
     @Autowired
