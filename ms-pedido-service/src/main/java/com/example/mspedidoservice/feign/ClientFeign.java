@@ -12,6 +12,6 @@ import java.util.Optional;
 @FeignClient(name = "ms-client-service",path = "/cliente")
 public interface ClientFeign {
     @GetMapping("/{id}")
-    ResponseEntity<Client> listById(@PathVariable(required = true) Integer id);
+    public ResponseEntity<Client> listById(@PathVariable(required = true) Integer id);
 
 }
