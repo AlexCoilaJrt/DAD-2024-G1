@@ -13,11 +13,12 @@ public class PedidoDetalle {
     private Double cantidad;
     private Double precio;
     private Integer productoId;
-    @Transient
-    private Producto producto;
+
 
     public PedidoDetalle() {
         this.cantidad = (double) 0;
         this.precio = (double) 0;
     }
+    @Transient
+    Producto producto;
 }

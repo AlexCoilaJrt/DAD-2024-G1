@@ -39,6 +39,10 @@ public class PedidoServiceImpl implements PedidoService {
     public Optional<Pedido> buscarPorId(Integer id) {
         Pedido pedido = pedidoRespository.findById(id).get();
         pedido.setClient(clientFeign.listById(pedido.getClientId()).getBody());
+        for (PedidoDetalle pedidoDetalle: pedido.getDetalle()){
+            pedidoDetalle.setProducto(productoFeign.listById(pedidoDetalle.getProductoId()).getBody());
+
+        }
         return Optional.of(pedido);
     }
 
