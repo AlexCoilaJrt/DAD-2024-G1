@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.mspedidoservice.service.PedidoService;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/pedido")
@@ -26,7 +27,7 @@ public class PedidoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Pedido> buscarPorId(@PathVariable(required = true) Integer id) {
+    public ResponseEntity<Optional<Pedido>> buscarPorId(@PathVariable(required = true) Integer id) {
         return ResponseEntity.ok(pedidoService.buscarPorId(id));
     }
 
