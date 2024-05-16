@@ -1,6 +1,5 @@
 package com.example.msauth.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,4 +22,4 @@ public class AuthUser {
     private String userName;
     private String password;
 
-    }
+}
