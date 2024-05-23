@@ -37,3 +37,4 @@ spring:
           predicates:
             - Path=/auth/**
 
+
